@@ -7,7 +7,7 @@ import { ThemeToggle } from "./theme-toggle";
 
 export default function Navbar() {
   return (
-    <nav className="border-b">
+    <nav className="border-0 shadow-sm shadow-primary">
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto">
         <div className="flex items-center mr-4">
           

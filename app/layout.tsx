@@ -1,12 +1,12 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Inter, Lato, Nunito } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ReduxProvider } from '@/lib/redux/provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
-const inter = Inter({ subsets: ['latin'] });
+const nunito = Nunito({ weight:"200", subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'MeraLuggage - Luggage Delivery Made Simple',
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={nunito.className}>
         <ReduxProvider>
           <ThemeProvider
             attribute="class"

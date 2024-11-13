@@ -9,6 +9,7 @@ import Image from "next/image";
 import BookingForm from "@/components/booking-form";
 import ServiceCard from "@/components/service-card";
 import TestimonialCard from "@/components/testimonial-card";
+import LuggageAnimation from "@/components/animations/LuggageAnimation";
 
 export default function Home() {
   const fadeIn = {
@@ -42,13 +43,13 @@ export default function Home() {
     <div className="flex flex-col items-center">
       {/* Hero Section */}
       <section className="relative w-full h-[600px]">
-        <Image
+        {/* <Image
           src="/images/hero-bg.jpg"
           alt="Luggage Delivery"
           fill
           className="object-cover brightness-50"
-        />
-        <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-4">
+        /> */}
+        <div className="absolute inset-0 flex flex-col items-center justify-center dark:text-[#686D76] p-4">
           <motion.h1 
             className="text-4xl md:text-6xl font-bold text-center mb-4"
             {...fadeIn}
@@ -70,6 +71,7 @@ export default function Home() {
               Get Started
             </Button>
           </motion.div>
+          <LuggageAnimation />
         </div>
       </section>
 
