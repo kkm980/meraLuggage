@@ -1,38 +1,40 @@
-import { Heart, Luggage } from "lucide-react";
+// Navbar.tsx
+import { navConstants } from "../../constants/navConstants.tsx";
 import Link from "next/link";
 import { Button } from "../ui/button";
-import { ThemeToggle } from "../theme-toggle";
 import Logo from "./logo";
 
 export default function Navbar() {
   return (
-    <nav className="border-0 shadow-sm shadow-primary">
+    <nav className="border-0 w-full">
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto">
         <Logo />
+
+        {/* Left Side Links */}
         <div className="flex-1">
           <div className="hidden md:flex items-center space-x-6 ml-6">
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              How it Works
-            </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Pricing
-            </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              About us
-            </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              FAQs
-            </Link>
-            <Link href="#" className="text-sm font-medium transition-colors hover:text-primary">
-              Contact us
-            </Link>
+            {navConstants.left.map((item, index) => (
+              <Link key={index} href={item.href} className="text-md font-bold transition-colors text-textColor-light dark:text-textColor-dark">
+                {item.label}
+              </Link>
+            ))}
           </div>
         </div>
 
+        {/* Right Side Components */}
         <div className="flex items-center space-x-4">
-          <ThemeToggle />
-          <Button variant="ghost">Sign In</Button>
-          <Button>Book Now</Button>
+          {navConstants.right.map((item, index) => {
+            if (item.type === "button") {
+              return (
+                <Button key={index} variant={item.variant || "default"}>
+                  {item.label}
+                </Button>
+              );
+            } else if (item.type === "component") {
+              return <div key={index}>{item.component}</div>;
+            }
+            return null;
+          })}
         </div>
       </div>
     </nav>

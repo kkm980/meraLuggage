@@ -21,7 +21,7 @@ const ScrollVideo: React.FC = () => {
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: container,
-        start: 'center center',
+        start: 'top top',
         end: '+=95%',
         pin: true,
         scrub: 1,
@@ -54,7 +54,7 @@ const ScrollVideo: React.FC = () => {
       })
       // Scale up video
       .to(video, {
-        width: video.clientWidth * 2.5,
+        width: video.clientWidth * 3.5,
         height: video.clientHeight * 5.0,
         duration: 1,
         ease: 'power2.inOut',
@@ -72,18 +72,26 @@ const ScrollVideo: React.FC = () => {
     };
   }, []);
 
+    const toggleMute = () => {
+        if (videoRef?.current) {
+            videoRef.current.muted = !videoRef.current?.muted;
+        }
+    };
+
+
   return (
     <div className="bg-transparent text-white absolute overflow-hidden">
       <div ref={containerRef} className="bg-transparent h-[450px] w-[100vw] top-[50px] absolute overflow-hidden">
-        <div ref={innerRef} className="bg-transparent absolute inset-0 flex items-start justify-end pt-[0px] pr-[240px] overflow-hidden">
+        <div ref={innerRef} className="bg-transparent absolute inset-0 flex items-start justify-end pt-[0px] pr-[330px] overflow-hidden">
           <video
             ref={videoRef}
-            className="w-[165px] h-[60px] mt-[20px] object-cover rounded-lg transform-gpu bg-transparent z-2 overflow-hidden"
+            className="w-[125px] h-[60px] mt-[20px] object-cover rounded-lg transform-gpu bg-transparent z-2 overflow-hidden"
             autoPlay
             muted
             loop
             playsInline
             style={{ opacity: 0.4 }} // Initial opacity set to 0.3
+            onClick={toggleMute} // Add onClick handler
           >
             <source
               src="/video/test.mp4"
