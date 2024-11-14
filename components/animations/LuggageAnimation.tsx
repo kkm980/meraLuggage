@@ -20,7 +20,7 @@ const LuggageAnimation: React.FC = () => {
       scrollTrigger: {
         trigger: container,
         start: 'top center',
-        end: 'bottom center',
+        end: 'center center',
         scrub: 1,
         markers: false,
       },
@@ -29,13 +29,13 @@ const LuggageAnimation: React.FC = () => {
     tl.fromTo(
       luggage,
       {
-        x: '5%',
+        x: '12%',
         y: '0%',
         rotate: -5,
       },
       {
         x: '-60vw',
-        y: '160%',
+        y: '120%',
         rotate: 360,
         ease: 'power1.inOut',
       }
@@ -49,7 +49,7 @@ const LuggageAnimation: React.FC = () => {
   return (
     <div
       ref={containerRef}
-      className="relative h-[80vh] w-full overflow-hidden bg-transparent rounded-xl shadow-inner"
+      className="relative h-[80vh] w-full overflow-hidden bg-transparent"
     >
          <Image src="/images/room.jpg" alt="luggage" width={600} height={600} className='absolute bottom-0 left-[0px]' />
       <div

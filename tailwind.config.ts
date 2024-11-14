@@ -60,6 +60,18 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+        textColor: {
+        // Light mode colors
+        light: {
+          DEFAULT: "#000B58",
+          foreground: "#C9E6F0",
+        },
+        // Dark mode colors
+        dark: {
+          DEFAULT: "#686D76",
+          foreground: "#F96E2A",
+        }
+      }
       },
       keyframes: {
         'accordion-down': {

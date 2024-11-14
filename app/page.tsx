@@ -10,6 +10,7 @@ import BookingForm from "@/components/booking-form";
 import ServiceCard from "@/components/service-card";
 import TestimonialCard from "@/components/testimonial-card";
 import LuggageAnimation from "@/components/animations/LuggageAnimation";
+import ScrollVideo from "@/components/animations/ScrollVideo";
 
 export default function Home() {
   const fadeIn = {
@@ -40,29 +41,35 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center overflow-hidden">
       {/* Hero Section */}
       <section className="relative w-full h-[600px]">
-        {/* <Image
-          src="/images/hero-bg.jpg"
-          alt="Luggage Delivery"
-          fill
-          className="object-cover brightness-50"
-        /> */}
-        <div className="absolute inset-0 flex flex-col items-center justify-center dark:text-[#686D76] p-4">
-          <motion.h1 
-            className="text-4xl md:text-6xl font-bold text-center mb-4"
+        <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 text-textColor-light dark:text-textColor-dark`}>
+          <motion.h1
+            className="text-4xl md:text-[64px] font-bold text-center mb-4 mt-12"
             {...fadeIn}
           >
-             Travel Light, Arrive Right
+            Travel Light, Arrive
+            <span
+              className=" pl-4
+      bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent
+      dark:from-indigo-400 dark:to-teal-400
+    "
+            >
+              Right
+            </span>
           </motion.h1>
-          <motion.p 
-            className="text-xl text-center mb-8"
+
+
+          <motion.p
+            className="text-[20px] text-center mb-8 mt-2"
             {...fadeIn}
-            transition={{ delay: 0.2 }}
+            transition={{ delay: 0.8 }}
           >
-             Let your luggage reach your destination before you do. India's first smart luggage delivery service for travellers.
+            Let your luggage reach your destination before you do. India's first smart luggage delivery service for travellers.
           </motion.p>
+
+          <LuggageAnimation />
           <motion.div
             {...fadeIn}
             transition={{ delay: 0.4 }}
@@ -71,13 +78,13 @@ export default function Home() {
               Get Started
             </Button>
           </motion.div>
-          <LuggageAnimation />
+          <ScrollVideo />
         </div>
       </section>
 
       {/* Services Section */}
       <section className="py-16 px-4 w-full max-w-7xl">
-        <motion.h2 
+        <motion.h2
           className="text-3xl font-bold text-center mb-12"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
@@ -95,7 +102,7 @@ export default function Home() {
       {/* Booking Form Section */}
       <section className="py-16 px-4 w-full bg-secondary/20">
         <div className="max-w-3xl mx-auto">
-          <motion.h2 
+          <motion.h2
             className="text-3xl font-bold text-center mb-8"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
@@ -109,7 +116,7 @@ export default function Home() {
 
       {/* Tracking Section */}
       <section className="py-16 px-4 w-full max-w-7xl">
-        <motion.div 
+        <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -134,7 +141,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <section className="py-16 px-4 w-full">
-        <motion.div 
+        <motion.div
           className="text-center max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -142,7 +149,7 @@ export default function Home() {
         >
           <h2 className="text-3xl font-bold mb-4">Secure Your Trip</h2>
           <p className="mb-8 text-muted-foreground">
-            Experience hassle-free travel with our expert luggage handling services. 
+            Experience hassle-free travel with our expert luggage handling services.
             Book now to ensure a stress-free journey.
           </p>
           <Button size="lg">Book Now</Button>

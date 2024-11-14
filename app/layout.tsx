@@ -6,7 +6,10 @@ import { ReduxProvider } from '@/lib/redux/provider';
 import Navbar from '@/components/navbar';
 import Footer from '@/components/footer';
 
-const nunito = Nunito({ weight:"200", subsets: ['latin'] });
+import { Montserrat } from 'next/font/google';
+
+const montserrat = Montserrat({ weight: "200", subsets: ['latin'] });
+
 
 export const metadata: Metadata = {
   title: 'MeraLuggage - Luggage Delivery Made Simple',
@@ -20,7 +23,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={nunito.className}>
+      <body className={montserrat.className}>
         <ReduxProvider>
           <ThemeProvider
             attribute="class"
