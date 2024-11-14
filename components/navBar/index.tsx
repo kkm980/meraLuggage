@@ -6,7 +6,7 @@ import Logo from "./logo";
 
 export default function Navbar() {
   return (
-    <nav className="border-0 shadow-sm shadow-primary">
+    <nav className="border-0 w-full">
       <div className="flex h-16 items-center px-4 max-w-7xl mx-auto">
         <Logo />
 

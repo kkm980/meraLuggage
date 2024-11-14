@@ -11,8 +11,13 @@ import ServiceCard from "@/components/service-card";
 import TestimonialCard from "@/components/testimonial-card";
 import LuggageAnimation from "@/components/animations/LuggageAnimation";
 import ScrollVideo from "@/components/animations/ScrollVideo";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(()=>{
+    // Scroll to the top of the page on load
+    window.scrollTo(0, 0);
+  },[])
   const fadeIn = {
     initial: { opacity: 0, y: 20 },
     animate: { opacity: 1, y: 0 },
@@ -41,12 +46,12 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center overflow-hidden">
+    <div className="flex flex-col items-center overflow-hidden bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground">
       {/* Hero Section */}
       <section className="relative w-full h-[600px]">
         <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 text-textColor-light dark:text-textColor-dark`}>
-          <motion.h1
-            className="text-4xl md:text-[64px] font-bold text-center mb-4 mt-12"
+          <motion.span
+            className="text-4xl md:text-[48px] font-bold text-center mb-4 mt-12"
             {...fadeIn}
           >
             Travel Light, Arrive
@@ -58,7 +63,7 @@ export default function Home() {
             >
               Right
             </span>
-          </motion.h1>
+          </motion.span>
 
 
           <motion.p

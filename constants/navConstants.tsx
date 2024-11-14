@@ -27,17 +27,17 @@ type ComponentItem = {
 // Define navbar constants with type annotations
 export const navConstants = {
   left: [
-    { type: "link", label: "How it Works", href: "#" },
+    { type: "link", label: "Working", href: "#" },
     { type: "link", label: "Pricing", href: "#" },
-    { type: "link", label: "About us", href: "#" },
+    { type: "link", label: "About", href: "#" },
     { type: "link", label: "FAQs", href: "#" },
-    { type: "link", label: "Contact us", href: "#" },
+    { type: "link", label: "Contact", href: "#" },
   ] as LinkItem[],
 
   right: [
     { type: "component", component: <ThemeToggle /> },
     { type: "button", label: "Sign In", variant: "ghost" },
-    { type: "button", label: "Book Now" },
+    { type: "button", label: "Book" },
   ] as (ButtonItem | ComponentItem)[],
 };
 

@@ -13,7 +13,7 @@ export default function Logo() {
             luggageRef.current,
             { x: 0, opacity: 0.7, rotation: 45 },  // Starting position with a slight tilt
             {
-                x: 196,
+                x: 190,
                 opacity: 1,
                 rotation: 0,  // Final position aligned at 0 degrees
                 duration: 5,
