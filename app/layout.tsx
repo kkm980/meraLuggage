@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { Inter, Lato, Nunito } from 'next/font/google';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ReduxProvider } from '@/lib/redux/provider';
-import Navbar from '@/components/navbar';
+import Navbar from '@/components/navBar';
 import Footer from '@/components/footer';
 
 import { Montserrat } from 'next/font/google';
