@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 import { ThemeProvider } from '@/components/theme-provider';
 import { ReduxProvider } from '@/lib/redux/provider';
 import Navbar from '@/components/navBar';
-import Footer from '@/components/footer';
+import Footer from '@/components/footer'; // test commit
 
 import FixedNav from '@/components/navBar/FixedNav';
 import { Inter } from 'next/font/google'
