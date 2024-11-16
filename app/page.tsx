@@ -48,6 +48,7 @@ export default function Home() {
   return (
     <div className="flex flex-col justify-start items-center overflow-hidden bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground m-0 p-0">
       {/* Hero Section */}
+      <ScrollVideo />
       <section className="relative w-full h-[600px]">
         <div className={`absolute inset-0 flex flex-col items-center justify-center p-4`}>
           <motion.span
@@ -86,7 +87,7 @@ export default function Home() {
               Get Started
             </Button>
           </motion.div>
-          <ScrollVideo />
+          
         </div>
       </section>
 
