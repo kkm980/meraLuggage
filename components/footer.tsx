@@ -11,11 +11,11 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               
-              <span className="ml-2 text-xl font-bold">MeraLuggage</span>
+              <span className="ml-2 text-xl font-bold">name</span>
               <Luggage className="h-6 w-6 text-primary" />
             </div>
             <p className="text-sm text-muted-foreground">
-              Making luggage delivery simple and hassle-free for everyone.
+              Making hassle-free for everyone.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© 2024 MeraLuggage. All rights reserved.</p>
+          <p>© 2024 name. All rights reserved.</p>
         </div>
       </div>
     </footer>

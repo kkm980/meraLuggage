@@ -12,6 +12,7 @@ import TestimonialCard from "@/components/testimonial-card";
 import LuggageAnimation from "@/components/animations/LuggageAnimation";
 import ScrollVideo from "@/components/animations/ScrollVideo";
 import { useEffect } from "react";
+import { config } from "@/constants/config";
 
 export default function Home() {
   useEffect(()=>{
@@ -27,19 +28,19 @@ export default function Home() {
   const services = [
     {
       title: "Book",
-      description: "Book your luggage pickup with just a few clicks",
+      description: " just a few clicks",
       icon: <Luggage className="h-6 w-6" />,
       image: "/images/book-service.jpg"
     },
     {
-      title: "Take Care",
-      description: "We ensure your bags are safely picked up and delivered",
+      title: "Care",
+      description: " and",
       icon: <Shield className="h-6 w-6" />,
       image: "/images/care-service.jpg"
     },
     {
-      title: "Travel Freely",
-      description: "Travel light while we handle your luggage",
+      title: "Freely",
+      description: "light",
       icon: <Map className="h-6 w-6" />,
       image: "/images/travel-service.jpg"
     }
@@ -56,16 +57,16 @@ export default function Home() {
             {...fadeIn}
           >
             <span className="text-[#FF5580] dark:text-[#697565] pr-4">
-             Travel 
+             {config?.home?.hero?.span1} 
             </span>
-            Light, Arrive
+            {config?.home?.hero?.span2}
             <span
               className=" pl-4
       bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent
       dark:from-indigo-400 dark:to-teal-400
     "
             >
-              Right
+              {config?.home?.hero?.span3}
             </span>
           </motion.span>
 
@@ -75,7 +76,7 @@ export default function Home() {
             {...fadeIn}
             transition={{ delay: 0.8 }}
           >
-            Let your luggage reach your destination before you do. India's first smart luggage delivery service for travellers.
+            {config?.home?.hero?.punch}
           </motion.p>
 
           <LuggageAnimation />
@@ -131,12 +132,12 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-4">Track Your Luggage</h2>
+          <h2 className="text-3xl font-bold mb-4">Track Your</h2>
           <p className="mb-8 text-muted-foreground">
-            Never lose sight of your luggage. Track its location in real-time and ensure it arrives safely.
+            Never lose sight of your. Track its  in real-time and ensure it safely.
           </p>
           <Button variant="outline" size="lg">
-            Track my Bag
+            Track
           </Button>
         </motion.div>
       </section>
@@ -156,10 +157,9 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          <h2 className="text-3xl font-bold mb-4">Secure Your Trip</h2>
+          <h2 className="text-3xl font-bold mb-4">Secure</h2>
           <p className="mb-8 text-muted-foreground">
-            Experience hassle-free travel with our expert luggage handling services.
-            Book now to ensure a stress-free journey.
+            
           </p>
           <Button size="lg">Book Now</Button>
         </motion.div>

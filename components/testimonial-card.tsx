@@ -20,7 +20,7 @@ export default function TestimonialCard() {
             ))}
           </div>
           <p className="text-lg mb-6">
-            "MeraLuggage made my travel experience so much smoother! 
+            "name made my travel experience so much smoother! 
             The luggage tracking feature is a game-changer."
           </p>
           <div className="flex items-center">

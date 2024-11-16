@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import {assets} from "../../../constants/assets"
+import { config } from "@/constants/config";
 
 export default function Logo() {
     const luggageRef = useRef(null);
@@ -24,9 +24,8 @@ export default function Logo() {
 
     return (
         <div className="flex items-center mr-8 cursor-pointer">
-            <span ref={luggageRef}>{assets?.logoIcon}</span> 
             <span className="text-2xl font-bold bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent dark:from-indigo-400 dark:to-teal-400">
-    MeraLuggage
+               {config?.logo?.name}
 </span>
 
 
