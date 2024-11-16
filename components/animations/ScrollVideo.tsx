@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { assets } from '@/constants/assets';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -94,7 +95,7 @@ const ScrollVideo: React.FC = () => {
             onClick={toggleMute} // Add onClick handler
           >
             <source
-              src="/video/test.mp4"
+              src={assets.video}
               type="video/mp4"
             />
             Your browser does not support the video tag.

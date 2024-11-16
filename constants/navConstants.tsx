@@ -30,7 +30,6 @@ export const navConstants = {
     { type: "link", label: "Working", href: "#" },
     { type: "link", label: "Pricing", href: "#" },
     { type: "link", label: "About", href: "#" },
-    { type: "link", label: "FAQs", href: "#" },
     { type: "link", label: "Contact", href: "#" },
   ] as LinkItem[],
 

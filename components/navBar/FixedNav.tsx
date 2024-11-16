@@ -44,7 +44,7 @@ const FixedNav: React.FC = () => {
   return (
     showNavBar && (
       
-      <div className={`w-[70%] max-w-[896px] h-[60px] bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground shadow-[#034441] shadow-lg rounded-[60px] fixed top-[10px] z-[999] flex items-center`}>
+      <div className={`w-[70%] max-w-[896px] h-[60px] bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground dark:shadow-[#034441] shadow-[#D76C82] shadow-lg rounded-[60px] fixed top-[10px] z-[999] flex items-center`}>
        <div className="w-full flex items-center justify-between">
         <Logo />
 

@@ -46,18 +46,21 @@ export default function Home() {
   ];
 
   return (
-    <div className="flex flex-col items-center overflow-hidden bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground">
+    <div className="flex flex-col justify-start items-center overflow-hidden bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground m-0 p-0">
       {/* Hero Section */}
       <section className="relative w-full h-[600px]">
-        <div className={`absolute inset-0 flex flex-col items-center justify-center p-4 text-textColor-light dark:text-textColor-dark`}>
+        <div className={`absolute inset-0 flex flex-col items-center justify-center p-4`}>
           <motion.span
-            className="text-4xl md:text-[48px] font-bold text-center mb-4 mt-12"
+            className="text-textColor-light dark:text-textColor-dark text-title font-bold mb-0 mt-12"
             {...fadeIn}
           >
-            Travel Light, Arrive
+            <span className="text-[#FF5580] dark:text-[#697565] pr-4">
+             Travel 
+            </span>
+            Light, Arrive
             <span
               className=" pl-4
-      bg-gradient-to-r from-blue-500 to-purple-500 bg-clip-text text-transparent
+      bg-gradient-to-r from-red-500 via-pink-500 to-yellow-500 bg-clip-text text-transparent
       dark:from-indigo-400 dark:to-teal-400
     "
             >
@@ -67,7 +70,7 @@ export default function Home() {
 
 
           <motion.p
-            className="text-[20px] text-center mb-8 mt-2"
+            className="text-textColor-light dark:text-textColor-dark text-punch text-center mb-8 mt-1"
             {...fadeIn}
             transition={{ delay: 0.8 }}
           >

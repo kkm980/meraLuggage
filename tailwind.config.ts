@@ -60,6 +60,7 @@ const config: Config = {
           '4': 'hsl(var(--chart-4))',
           '5': 'hsl(var(--chart-5))',
         },
+
         textColor: {
           // Light mode colors
           light: {
@@ -68,7 +69,7 @@ const config: Config = {
           },
           // Dark mode colors
           dark: {
-            DEFAULT: "#686D76",
+            DEFAULT: "#FFFFFF33",
             foreground: "#F96E2A",
           },
 
@@ -78,12 +79,16 @@ const config: Config = {
             foreground: "#FFF4B7",
           },
           dark: {
-            foreground: "#1A3636"
+            foreground: "#030c11"
           }
         }
         
 
 
+      },
+      fontSize: {
+        "title": "48px",
+        "punch": "20px"
       },
       keyframes: {
         'accordion-down': {

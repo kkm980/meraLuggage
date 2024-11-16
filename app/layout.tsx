@@ -6,20 +6,21 @@ import Navbar from '@/components/navBar';
 import Footer from '@/components/footer';
 
 import FixedNav from '@/components/navBar/FixedNav';
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
+import { assets } from '@/constants/assets';
  
 // If loading a variable font, you don't need to specify the font weight
-const inter = Inter({
+const inter = Montserrat({
+  weight: "300",
   subsets: ['latin'],
   display: 'swap',
 })
-
 
 export const metadata: Metadata = {
   title: 'MeraLuggage | Luggage Delivery Made Simple',
   description: 'Experience hassle-free luggage transport service for travellers across India and beyond with our reliable service.',
   icons: {
-    icon: "/images/luggage.png",
+    icon: assets?.favicon,
   },
   openGraph: {
     title: "MeraLuggage | Luggage Delivery Made Simple",
@@ -28,7 +29,7 @@ export const metadata: Metadata = {
     url: `${process.env.NEXT_PUBLIC_REFERRAL_SHARE_URL}/en/airdrop`,
     images: [
       {
-        url: "/images/luggage.png",
+        url: assets?.favicon,
       },
     ],
   },
@@ -37,7 +38,7 @@ export const metadata: Metadata = {
     title: "MeraLuggage | Luggage Delivery Made Simple",
     description: "Experience hassle-free luggage transport service for travellers across India and beyond with our reliable service.",
     images: [
-      "/images/luggage.png",
+      assets?.favicon,
     ],
   },
 };
@@ -57,10 +58,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <div className="flex min-h-screen flex-col items-center">
+            <div className="flex min-h-screen flex-col items-center bg-backgroundColor-light-foreground dark:bg-backgroundColor-dark-foreground p-0 m-0">
               <Navbar />
               <FixedNav />
-              <main className="flex-grow">{children}</main>
+              {children}
               <Footer />
             </div>
           </ThemeProvider>
