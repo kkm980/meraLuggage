@@ -4,12 +4,11 @@ import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Card, CardContent } from "@/components/ui/card";
-import { Heart, Luggage, Map, Shield } from "lucide-react";
+import { Heart, Map, Shield } from "lucide-react";
 import Image from "next/image";
 import BookingForm from "@/components/booking-form";
 import ServiceCard from "@/components/service-card";
 import TestimonialCard from "@/components/testimonial-card";
-import LuggageAnimation from "@/components/animations/LuggageAnimation";
 import ScrollVideo from "@/components/animations/ScrollVideo";
 import { useEffect } from "react";
 import { config } from "@/constants/config";
@@ -29,7 +28,6 @@ export default function Home() {
     {
       title: "Book",
       description: " just a few clicks",
-      icon: <Luggage className="h-6 w-6" />,
       image: "/images/book-service.jpg"
     },
     {
@@ -78,8 +76,6 @@ export default function Home() {
           >
             {config?.home?.hero?.punch}
           </motion.p>
-
-          <LuggageAnimation />
           <motion.div
             {...fadeIn}
             transition={{ delay: 0.4 }}

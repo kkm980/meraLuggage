@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import { Luggage } from 'lucide-react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';

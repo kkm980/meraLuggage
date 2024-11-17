@@ -17,14 +17,14 @@ const inter = Montserrat({
 })
 
 export const metadata: Metadata = {
-  title: 'name | Luggage Delivery Made Simple',
-  description: 'Experience hassle-free luggage transport service for travellers across India and beyond with our reliable service.',
+  title: 'name | Delivery Made Simple',
+  description: 'Experience hassle-free  transport service for travellers across India and beyond with our reliable service.',
   icons: {
     icon: assets?.favicon,
   },
   openGraph: {
-    title: "name | Luggage Delivery Made Simple",
-    description: "Experience hassle-free luggage transport service for travellers across India and beyond with our reliable service.",
+    title: "name |  Delivery Made Simple",
+    description: "Experience hassle-free  transport service for travellers across India and beyond with our reliable service.",
     type: "website",
     url: `${process.env.NEXT_PUBLIC_REFERRAL_SHARE_URL}/en/airdrop`,
     images: [
@@ -35,8 +35,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "name | Luggage Delivery Made Simple",
-    description: "Experience hassle-free luggage transport service for travellers across India and beyond with our reliable service.",
+    title: "name |  Delivery Made Simple",
+    description: "Experience hassle-free  transport service for travellers across India and beyond with our reliable service.",
     images: [
       assets?.favicon,
     ],

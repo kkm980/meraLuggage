@@ -21,7 +21,7 @@ export default function TestimonialCard() {
           </div>
           <p className="text-lg mb-6">
             "name made my travel experience so much smoother! 
-            The luggage tracking feature is a game-changer."
+            The tracking feature is a game-changer."
           </p>
           <div className="flex items-center">
             <div className="relative w-12 h-12 rounded-full overflow-hidden">
